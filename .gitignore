@@ -1,6 +1,6 @@
 # common
-**/dist/**
-**/build/**
+dist/
+build/
 
 node_modules/
 .DS_Store
@@ -13,6 +13,3 @@ yarn-error.log*
 
 # turbo
 .turbo
-.next/**
-dist/**
-build/**

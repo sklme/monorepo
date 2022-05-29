@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "iskl",
+  "devDependencies": {
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
+  },
+  "packageManager": "pnpm@7.0.1"
+}

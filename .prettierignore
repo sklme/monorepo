@@ -1,0 +1,7 @@
+node_modules/
+build/
+dist/
+.vercel/
+.turbo/
+.umi/
+pnpm-lock.yaml

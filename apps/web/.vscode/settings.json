@@ -1,0 +1,21 @@
+{
+  // 给typescript-plugin-css-modules的配置，指定为项目的tsc
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  // emmet
+  "emmet.includeLanguages": {
+    "javascriptreact": "xml",
+    "typescriptreact": "xml"
+  },
+
+  // 指定给path-intellisense插件的路径联想
+  "path-intellisense.mappings": {
+    "@": "${workspaceFolder}/src"
+  },
+
+  // windicss支持
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@iskl/monorepo-share",
+  "version": "1.0.0",
+  "description": "common monorepo share files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "iskl",
+  "license": "ISC"
+}

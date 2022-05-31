@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "iskl",
+  "scripts": {
+    "dev": "pnpm run -r --parallel --filter './apps/*' dev",
+    "build": "pnpm run -r --filter './apps/*' build"
+  },
   "devDependencies": {
     "prettier": "latest",
     "turbo": "latest"

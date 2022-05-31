@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   env: {
     node: true,
     'vue/setup-compiler-macros': true,
@@ -8,7 +9,7 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'prettier',
     'plugin:@typescript-eslint/recommended',
-    // 'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -17,7 +18,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    project: './tsconfig.json',
+    project: './apps/web/tsconfig.json',
   },
   rules: {
     // prefer代码风格系列

@@ -19,7 +19,6 @@
 </template>
 
 <script lang="ts" setup>
-import TestEvent from '@/components/PageTwo/TestEvent.vue';
 import { useStore } from 'vuex';
 import { computed, ref } from 'vue';
 const store = useStore();

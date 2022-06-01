@@ -21,7 +21,10 @@
 <script lang="ts" setup>
 import { useStore } from 'vuex';
 import { computed, ref } from 'vue';
-const store = useStore();
+import { service } from '@/service';
+const store = useStore<{
+  test: string;
+}>();
 
 const x = ref(0);
 function clickX() {
@@ -41,6 +44,19 @@ function testEvent(text: string) {
 const renderText = computed(() => {
   return childEventText.value ? `收到事件：${childEventText.value}` : '';
 });
+
+// 请求
+const result = service.request({
+  method: 'POST',
+  url: service.getApiUrl('a'),
+  params: {
+    a: 1,
+  },
+  data: {
+    b: 2,
+  },
+});
+console.log(result);
 </script>
 
 <style lang="less" scoped>

@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from 'axios';
+import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import { Optional } from 'utility-types';
 
 export interface ApiItem {
@@ -43,14 +43,26 @@ class CommonService<
   }
 
   // 通用的request
-  // async request<ReturnShape>(config: AxiosRequestConfig) {
-  //   // 获取请求参数
-  //   // const params = config.data || config.params || {};
-  //   //
-  //   // const params = {
-  //   //   _timestamp: +new Date(),
-  //   // };
-  // }
+  async request<ReturnShape>(config: AxiosRequestConfig) {
+    // 获取请求参数
+    const reqParams =
+      (config.data as Record<string, unknown>) ||
+      (config.params as Record<string, unknown>) ||
+      {};
+
+    const params = {
+      _timestamp: +new Date(),
+      ...reqParams,
+    };
+
+    if (config.method?.toLowerCase() === 'get') {
+      config.params = params;
+    } else {
+      config.data = params;
+    }
+
+    return this.#axios.request<ReturnShape>(config);
+  }
 }
 
 // 示例

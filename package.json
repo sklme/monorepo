@@ -10,7 +10,8 @@
   },
   "devDependencies": {
     "prettier": "latest",
-    "turbo": "latest"
+    "turbo": "latest",
+    "utility-types": "^3.10.0"
   },
   "workspaces": [
     "apps/*",

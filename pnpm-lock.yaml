@@ -6,9 +6,11 @@ importers:
     specifiers:
       prettier: latest
       turbo: latest
+      utility-types: ^3.10.0
     devDependencies:
       prettier: 2.6.2
       turbo: 1.2.14
+      utility-types: 3.10.0
 
   apps/server:
     specifiers:
@@ -5960,6 +5962,11 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
+
+  /utility-types/3.10.0:
+    resolution: {integrity: sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==}
+    engines: {node: '>= 4'}
+    dev: true
 
   /utils-merge/1.0.1:
     resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=}

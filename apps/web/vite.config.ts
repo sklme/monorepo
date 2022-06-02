@@ -22,6 +22,17 @@ export default defineConfig({
   ],
   server: {
     port: 8888,
+    host: '0.0.0.0',
+    proxy: {
+      // server2
+      // '/api/server2': 'http://localhost:3002',
+      '/api': {
+        target: 'http://localhost:3001',
+        rewrite: (path) => {
+          return path.replace(/^\/api/, '');
+        },
+      },
+    },
   },
 
   resolve: {

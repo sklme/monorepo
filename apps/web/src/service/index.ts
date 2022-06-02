@@ -2,12 +2,12 @@ import { CommonService } from '@/service/_service';
 
 const apis = [
   {
-    name: 'a',
-    path: '/a',
+    name: 'server1',
+    path: '/',
   },
   {
-    name: 'b',
-    path: '/b',
+    name: 'server2',
+    path: '/server2',
   },
 ] as const;
 

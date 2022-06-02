@@ -20,7 +20,7 @@
 
 <script lang="ts" setup>
 import { useStore } from 'vuex';
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { service } from '@/service';
 const store = useStore<{
   test: string;
@@ -45,18 +45,20 @@ const renderText = computed(() => {
   return childEventText.value ? `收到事件：${childEventText.value}` : '';
 });
 
-// 请求
-const result = service.request({
-  method: 'POST',
-  url: service.getApiUrl('a'),
-  params: {
-    a: 1,
-  },
-  data: {
-    b: 2,
-  },
+onMounted(async () => {
+  // 请求
+  const result = await service.request({
+    method: 'GET',
+    url: service.getApiUrl('server1'),
+    params: {
+      a: 1,
+    },
+    data: {
+      b: 2,
+    },
+  });
+  console.log(result);
 });
-console.log(result);
 </script>
 
 <style lang="less" scoped>

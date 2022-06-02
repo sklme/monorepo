@@ -39,7 +39,7 @@ export class CommonService<
   // 初始化host
   getApiUrl(apiName: T[number]['name']) {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    return this.#apiMap.get(apiName)!.name;
+    return this.#apiMap.get(apiName)!.url;
   }
 
   // 通用的request
